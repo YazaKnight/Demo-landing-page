@@ -99,6 +99,17 @@ button {
 button:hover {
   background-color: #3730a3;
 }
+
+button:active {
+  background-color: #2e249c;
+  transform: scale(0.98);
+}
+
+/* Ensure inputs are tappable on touch devices */
+input, button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 8px;
+}
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 1.8rem;

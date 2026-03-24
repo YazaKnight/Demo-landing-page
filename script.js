@@ -1,6 +1,14 @@
-emailjs.init('QM_XlswPfONHVuosG'); 
+emailjs.init('QM_XlswPfONHVuosG');
 
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('bookingForm');
+  if (!form) {
+    console.error('Form not found');
+    return;
+  }
+
+  form.addEventListener('submit', function(e) {
   e.preventDefault();
 
   const name = document.getElementById('name').value.trim();
@@ -52,3 +60,4 @@ function sendEmail(name, email, phone) {
       console.error(error);
     });
 }
+});

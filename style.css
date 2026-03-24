@@ -99,3 +99,13 @@ button {
 button:hover {
   background-color: #3730a3;
 }
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    margin: 20px;
+    padding: 25px;
+  }
+}

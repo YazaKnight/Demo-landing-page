@@ -17,11 +17,27 @@
     <section class="hero">
   <h1>Book Your Free Consultation</h1>
   <p>Fill in the form below and we'll be in touch shortly.</p>
-   <!-- Form Section -->
   <section class="form-section">
-    <form id="bookingForm">
-      <!-- your form fields here -->
-    </form>
+  <form id="bookingForm">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="John Smith">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="john@email.com">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+971 50 000 0000">
+    </div>
+
+    <button type="submit">Book My Free Consultation</button>
+  </form>
+</section>
+
     </section>
   <script src="script.js"></script>
 </body>

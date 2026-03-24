@@ -38,7 +38,7 @@ function sendEmail(name, email, phone) {
     phone: phone
   };
 
-  emailjs.sendForm('service_9ot8rlb', 'template_3vn7dl5', templateParams)
+  emailjs.send('service_9ot8rlb', 'template_3vn7dl5', templateParams)
     .then(function() {
       // Show success message
       document.getElementById('bookingForm').innerHTML = `

@@ -1,3 +1,5 @@
+emailjs.init(QM_XlswPfONHVuosG); 
+
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -28,3 +30,24 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   // If all good, send email (we'll add this next)
   sendEmail(name, email, phone);
 });
+function sendEmail(name, email, phone) {
+  const templateParams = {
+    name: name,
+    email: email,
+    phone: phone
+  };
+
+  emailjs.send(service_i43cgs9, template_3vn7dl5, templateParams)
+    .then(function() {
+      // Show success message
+      document.getElementById('bookingForm').innerHTML = `
+        <div style="text-align:center; padding: 20px;">
+          <h2 style="color: #4f46e5;">🎉 Booking Confirmed!</h2>
+          <p>Check your email for confirmation, ${name}!</p>
+        </div>
+      `;
+    }, function(error) {
+      alert('Something went wrong. Please try again.');
+      console.error(error);
+    });
+}

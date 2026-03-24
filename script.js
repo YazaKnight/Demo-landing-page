@@ -44,7 +44,7 @@ function sendEmail(name, email, phone) {
       document.getElementById('bookingForm').innerHTML = `
         <div style="text-align:center; padding: 20px;">
           <h2 style="color: #4f46e5;">🎉 Booking Confirmed!</h2>
-          <p style="color: inherit;">Check your email for confirmation, ${name}!</p>
+          <p style="color: black;">Check your email for confirmation, ${name}!</p>
         </div>
       `;
     }, function(error) {

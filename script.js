@@ -1,4 +1,4 @@
-emailjs.init(QM_XlswPfONHVuosG); 
+emailjs.init('QM_XlswPfONHVuosG'); 
 
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -37,7 +37,7 @@ function sendEmail(name, email, phone) {
     phone: phone
   };
 
-  emailjs.send(service_i43cgs9, template_3vn7dl5, templateParams)
+  emailjs.send('service_i43cgs9', 'template_3vn7dl5', templateParams)
     .then(function() {
       // Show success message
       document.getElementById('bookingForm').innerHTML = `

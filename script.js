@@ -30,6 +30,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   // If all good, send email (we'll add this next)
   sendEmail(name, email, phone);
 });
+
 function sendEmail(name, email, phone) {
   const templateParams = {
     name: name,
@@ -37,13 +38,13 @@ function sendEmail(name, email, phone) {
     phone: phone
   };
 
-  emailjs.send('service_i43cgs9', 'template_3vn7dl5', templateParams)
+  emailjs.sendForm('service_9ot8rlb', 'template_3vn7dl5', templateParams)
     .then(function() {
       // Show success message
       document.getElementById('bookingForm').innerHTML = `
         <div style="text-align:center; padding: 20px;">
           <h2 style="color: #4f46e5;">🎉 Booking Confirmed!</h2>
-          <p>Check your email for confirmation, ${name}!</p>
+          <p style="color: inherit;">Check your email for confirmation, ${name}!</p>
         </div>
       `;
     }, function(error) {
